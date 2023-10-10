@@ -8,7 +8,7 @@ import { TicketItem } from './_components'
 import { TTicket } from './_types/ticket.type'
 
 export default async function Ticket() {
-	const ticketListResponse = await fetch('http://localhost:4000/tickets', {
+	const ticketListResponse = await fetch('http://127.0.0.1:4000/tickets', {
 		// next: { revalidate: 0 }
 		cache: 'no-store'
 	})

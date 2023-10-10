@@ -14,7 +14,7 @@ import {
 } from '@/app/tickets/_types/ticket.type'
 
 export async function generateStaticParams() {
-	const ticketDetailResponse = await fetch(`http://localhost:4000/tickets`, {
+	const ticketDetailResponse = await fetch(`http://127.0.0.1:4000/tickets`, {
 		// next: { revalidate: 0 }
 		cache: 'no-store'
 	})
@@ -30,7 +30,7 @@ export default async function Ticket({
 	params: { id }
 }: TTicketDetailPageProps) {
 	const ticketDetailResponse = await fetch(
-		`http://localhost:4000/tickets/${id}`,
+		`http://127.0.0.1:4000/tickets/${id}`,
 		{
 			// next: { revalidate: 0 }
 			cache: 'no-store'
